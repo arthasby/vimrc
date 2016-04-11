@@ -27,16 +27,9 @@ Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'tpope/vim-fugitive'
 Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim'
-Plug 'ervandew/ag'
+Plug 'rking/ag.vim'
 
 call plug#end()
-
-" => vim-scripts/taglist.vim -------------------
-if !empty("$HOME/.vim/plugged/taglist.vim")
-nnoremap <silent> <F9> :Tlist<CR>
-let Tlist_Exit_OnlyWindow=1
-let Tlist_Show_One_File=1
-endif
 
 " => majutsushi/tagbar -------------------------
 if !empty("$HOME/.vim/plugged/tagbar")
