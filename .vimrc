@@ -28,6 +28,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim'
 Plug 'rking/ag.vim'
+Plug 'Chun-Yang/vim-action-ag'
 
 call plug#end()
 
@@ -56,4 +57,17 @@ endif
 if !empty("$HOME/.vim/plugged/youcompleteme")
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 let g:ycm_confirm_extra_conf = 0
+endif
+
+" => rking/ag.vim ------------------------------
+if !empty("$HOME/.vim/plugged/ag.vim")
+let g:ag_working_path_mode="r"
+endif
+
+" => Chun-Yang/vim-action-ag -------------------
+if !empty("$HOME/.vim/plugged/vim-action-ag")
+" use * to search current word in normal mode
+nmap * <Plug>AgActionWord
+" " use * to search selected text in visual mode
+vmap * <Plug>AgActionVisual
 endif
