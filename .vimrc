@@ -15,15 +15,31 @@ set softtabstop=4
 set laststatus=2
 set showtabline=2
 
+if has("gui_running")
+    set guifont=Yahei\ Consolas\ Hybrid
+    set guioptions-=e
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=L
+    set guioptions-=r
+    set guioptions-=B
+    set guioptions-=0
+    set guioptions=
+    set guitablabel=
+    "set paste
+    set mousemodel=popup_setpos
+    set mouse-=a
+endif
+
 " => junegunn/vim-plug
-call plug#begin('~/.vim/plugged')
+call plug#begin('$HOME/.vim/plugged')
 
 Plug 'simplyzhao/cscope_maps.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'google/vim-colorscheme-primary'
 Plug 'vim-scripts/bufexplorer.zip'
-Plug 'Valloric/YouCompleteMe'
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+"Plug 'Valloric/YouCompleteMe'
+"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'tpope/vim-fugitive'
 Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim'
