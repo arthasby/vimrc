@@ -45,6 +45,7 @@ Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'Chun-Yang/vim-action-ag'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -86,4 +87,9 @@ if !empty("$HOME/.vim/plugged/vim-action-ag")
 nmap * <Plug>AgActionWord
 " " use * to search selected text in visual mode
 vmap * <Plug>AgActionVisual
+endif
+
+" => vim-airline/vim-airline -------------------
+if !empty("$HOME/.vim/plugged/vim-airline")
+let g:airline#extensions#tabline#enabled = 1
 endif
